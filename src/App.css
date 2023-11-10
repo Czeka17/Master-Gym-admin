@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  max-width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background: #282A3A;
+  color:#C6972D;
+  overflow-x: hidden;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+span{
+  font-weight: bold;
+  color:rgb(236, 176, 36);
+}
+a,span,ol,ul,hr{
+  margin: 1em;
+}
+
+a{
+  position: relative;
+          transition: all 0.3s;
+          overflow: hidden;
+          margin:0;
+          padding: 0;
+          font-weight: bold;
+          color: rgb(236, 176, 36);
+          border-bottom: 1px solid rgb(236, 176, 36);
+          &:hover{
+              color:#282A4B;
+              border-bottom: 1px solid #282A4B;
+              background-color: rgb(236, 176, 36);
+          }
+         
+      }  
+hr{
+  border: none;
+  height: 2px;
+  background-color:#C6972D ;
+}
+ol,ul{
+  text-align: left;
+}

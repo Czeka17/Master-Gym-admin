@@ -1,0 +1,107 @@
+$main-color: #282A3A;
+$alternative-color:#474747;
+$secondary-color:#282A4B;
+$third-color:#C6972D;
+$fourth-color:rgb(236, 176, 36);
+
+.contact-us{
+    padding: 5em 2em;
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+            border: 1px solid $third-color;
+            border-radius: 10px;
+            padding: 3em 2em;
+    }
+    &__line{
+            margin: 2em 0;
+            padding: 1px;
+            min-width: 2px;
+            height: 2;
+            border-radius: 10px;
+            background-color: $third-color;
+    }
+    &__form{
+        padding: 3em 0;
+        &-box{
+            position: relative;
+            padding: 0.5em 0;
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        input, textarea{
+            padding:1em;
+            border: 1px solid $third-color;
+            background: $main-color;
+            color: $third-color;
+            outline: none;
+            border-radius: 10px;
+            transition: 0.5s;
+            max-width: 100%;
+            min-width: 100%;
+            &:valid~span,
+            &:focus~span{
+                color: $third-color;
+                transform: translateX(10px) translateY(-8px);
+                font-size: 0.65em;
+                padding: 0 10px;
+                background-color: $main-color;
+                border-left: 1px solid $third-color;
+                border-right: 1px solid $third-color;
+                letter-spacing: 0.2em;
+            }
+        }
+        span{
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            color: rgba(198, 151, 45, 0.5);
+            text-transform: uppercase;
+            transition: 0.5s;
+        }
+        }
+        
+        &-btn{
+            border-radius: 10px;
+            margin-top: 2em;
+            padding: 0.5em 2em;
+            background-color: transparent;
+            color:$third-color;
+            border: 1px solid $third-color;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all .3s;
+            &:hover{
+                background-color: $third-color;
+                color:$main-color;
+            }
+        }
+    }
+}
+
+@media(min-width:992px){
+    .contact-us{
+        &__box{
+            flex-direction: column;
+        }
+        &__info{
+            width: 30%;
+        }
+        &__form{
+            width: 50%;
+            margin-left: 2em;
+        }
+        &__line{
+            margin: 0 2em;
+            padding: 1px;
+            width: 2px;
+            min-height: 100%;
+            border-radius: 10px;
+            background-color: $third-color;
+    }
+        }
+}
