@@ -10,6 +10,9 @@ const ImageForm = () => {
     setImage(media.url);
     console.log(media.url)
   }
+  function deleteImage(){
+    setImage("")
+  }
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -75,6 +78,12 @@ const ImageForm = () => {
         <label>Zdjecie</label>
         <CloudinaryUploader onUpload={handleUpload}/>
       </div>
+          <div className={styles.mediaPreview}>
+              <div>
+                <img src={image} alt="Post Media" />
+                <p onClick={deleteImage}>X</p>
+              </div>
+          </div>
       <button className={styles["contact-us__form-btn"]} type="submit">Wyslij</button>
     </form>
     </div>
