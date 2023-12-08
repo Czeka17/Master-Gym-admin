@@ -6,11 +6,18 @@ $fourth-color:rgb(236, 176, 36);
 
 .contact-us{
     padding: 5em 2em;
+    max-width: 1200px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     &__box{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        width: 100%;
             border: 1px solid $third-color;
             border-radius: 10px;
             padding: 3em 2em;
@@ -24,6 +31,7 @@ $fourth-color:rgb(236, 176, 36);
             background-color: $third-color;
     }
     &__form{
+        width: 100%;
         padding: 3em 0;
         &-box{
             position: relative;
@@ -87,13 +95,10 @@ $fourth-color:rgb(236, 176, 36);
     .contact-us{
         &__box{
             flex-direction: column;
+            align-items: center;
         }
         &__info{
             width: 30%;
-        }
-        &__form{
-            width: 50%;
-            margin-left: 2em;
         }
         &__line{
             margin: 0 2em;

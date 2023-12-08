@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import styles from './form.module.scss'
+import CloudinaryUploader from './cloudinary';
 const ImageForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [intro, setIntro] = useState('');
   const [image, setImage] = useState('');
-
+  function handleUpload(media) {
+    setImage(media.url);
+    console.log(media.url)
+  }
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -17,9 +21,6 @@ const ImageForm = () => {
     setDescription(e.target.value);
   };
 
-  const handleImageChange = (e) => {
-    setImage(e.target.value);
-  };
 
   const placeSubmitHandler = async event => {
     event.preventDefault();
@@ -72,10 +73,14 @@ const ImageForm = () => {
       </div>
       <div className={styles["contact-us__form-box"]}>
         <label>Zdjecie</label>
-        <input type="text" value={image} onChange={handleImageChange} required />
+        <CloudinaryUploader onUpload={handleUpload}/>
       </div>
       <button className={styles["contact-us__form-btn"]} type="submit">Wyslij</button>
     </form>
+    </div>
+    <div>
+    <div className={styles.post__description} dangerouslySetInnerHTML={{__html: description}}>
+        </div>
     </div>
     </section>
   );
